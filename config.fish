@@ -15,15 +15,6 @@ if status is-interactive
     alias ssh='kitten ssh'
     set -U fish_user_paths ~/bin $fish_user_paths ~/ghc-9.10.3-x86_64-unknown-linux/bin ~/Desktop/cs681 ~/.local/kitty.app/bin ~/bin/blender-5.1.0-linux-x64
     set -Ux TERMINAL kitty
-    function run_vegeta -a num
-        echo "GET http://192.168.1.106:8080/" | vegeta attack -rate={$num} -duration=1m > results_{$num}.bin; vegeta report results_{$num}.bin > report_{$num}.txt
-    end
-    function ipl
-	cd ~/cs316; COFFRE_HOST=cs316 sudo -E ./qemu-coffre-linux-x86_64 balaji-amd64.qcow2 4 4G < creds; cd -
-    end
-    function coool
-	cd ~/cs6004; COFFRE_HOST=cs6004 sudo -E ./qemu-coffre-linux-x86_64 CS6004-balaji-amd64.qcow2 4 8G < creds; cd -
-    end
 end
 
 alias .. "cd .."
