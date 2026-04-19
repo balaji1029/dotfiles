@@ -31,5 +31,6 @@ alias lt "eza --group --header --group-directories-first --tree --level 3 --hype
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
 
-source "$HOME/.cargo/env.fish"
+test -f $HOME/.cargo/env.fish; and source $HOME/.cargo/env.fish
 zoxide init fish --cmd='cd' | source
+command -q atuin; and atuin init fish | source

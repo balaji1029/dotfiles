@@ -112,6 +112,14 @@ else
     ok "cargo already installed"
 fi
 
+# ---- atuin (shell history) ----------------------------------------------
+if ! has atuin; then
+    log "installing atuin"
+    curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
+else
+    ok "atuin already installed"
+fi
+
 # ---- Hasklug Nerd Font Mono ---------------------------------------------
 install_hasklug_font() {
     local font_url="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hasklig.zip"
