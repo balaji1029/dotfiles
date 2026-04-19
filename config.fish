@@ -4,15 +4,16 @@ if status is-interactive
     alias py='python3'
     alias python='python3'
     alias x='clear'
-    alias code='code'
     alias gti='git'
     alias racket='/usr/racket/bin/racket'
     alias drracket='/usr/racket/bin/drracket'
-    alias ls='eza'
     alias la='eza -a'
-    alias ll='eza -al'
     alias bat='batcat'
     alias ssh='kitten ssh'
+    alias gita='git add'
+    alias gitc='git commit'
+    alias gitac='git commit -a'
+    alias gitp='git push'
     set -U fish_user_paths ~/bin $fish_user_paths ~/ghc-9.10.3-x86_64-unknown-linux/bin ~/Desktop/cs681 ~/.local/kitty.app/bin ~/bin/blender-5.1.0-linux-x64
     set -Ux TERMINAL kitty
 end
